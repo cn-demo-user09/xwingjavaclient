@@ -5,14 +5,10 @@ build:
         name: Maven install
         code: mvn install
     - script:
-        name: Make Target Directory
+        name: CD Target Directory
         code: |
-          mkdir target
-          ls
-    - script:
-        name: Move from pipeline to target
-        code: |
-          mv /pipeline/source/target/XwingApp-1.0-dist.zip /target        
+          cd target
+          ls   
     - joshholt/oracle-accs-deploy:
         opc_user: $OPC_USERNAME
         opc_password: $OPC_PASSWORD
@@ -20,5 +16,5 @@ build:
         domain: $IDENTITY_DOMAIN
         application_name: javafighter
         application_type: java
-        file: java_fighter-0.0.1.zip
+        file: XwingApp-1.0-dist.zip
         subscription_type: Hourly
