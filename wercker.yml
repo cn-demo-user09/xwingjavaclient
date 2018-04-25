@@ -10,9 +10,9 @@ build:
           mkdir target
           ls
     - script:
-      name: Move from pipeline to target
-      code: |
-        mv /pipeline/source/target/XwingApp-1.0-dist.zip /target        
+        name: Move from pipeline to target
+        code: |
+          mv /pipeline/source/target/XwingApp-1.0-dist.zip /target        
     - joshholt/oracle-accs-deploy:
         opc_user: $OPC_USERNAME
         opc_password: $OPC_PASSWORD
