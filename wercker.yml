@@ -8,13 +8,13 @@ build:
         name: CD Target Directory
         code: |
           cd target
-          ls   
+          mv XwingApp-1.0-dist.zip java_fighter-0.0.1.$OPC_USERNAME.zip   
     - joshholt/oracle-accs-deploy:
         opc_user: $OPC_USERNAME
         opc_password: $OPC_PASSWORD
         rest_url: $REST_URL
         domain: $IDENTITY_DOMAIN
-        application_name: javafighter
+        application_name: javafighter$OPC_USERNAME
         application_type: java
-        file: XwingApp-1.0-dist.zip
+        file: java_fighter-0.0.1.$OPC_USERNAME.zip
         subscription_type: Hourly
