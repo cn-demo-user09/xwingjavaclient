@@ -9,7 +9,7 @@ build:
         code: |
           cd target
           mv XwingApp-1.0-dist.zip java_fighter-0.0.1.$OPC_USERNAME.zip   
-    - joshholt/oracle-accs-deploy:
+    - thebeebs/oracle-accs-deploy:
         opc_user: $OPC_USERNAME
         opc_password: $OPC_PASSWORD
         rest_url: $REST_URL
