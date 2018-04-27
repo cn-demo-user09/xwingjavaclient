@@ -1,4 +1,4 @@
-/* Copyright © 2016 Oracle and/or its affiliates. All rights reserved. */
+/* Copyright Â© 2016 Oracle and/or its affiliates. All rights reserved. */
 package com.example.rest;
  
 import java.util.Optional;
@@ -31,7 +31,7 @@ public class App {
      */
     public static void main(String[] args) {
         // Set properties
-        myProps.setProperty("server.address", host.orElse("localhost"));
+        myProps.setProperty("server.address", host.orElse("http://129.144.148.225:3000/shield/33/45/blue/javafighteruser01"));
         myProps.setProperty("server.port", port.orElse("8080"));
  
         SpringApplication app = new SpringApplication(App.class);
