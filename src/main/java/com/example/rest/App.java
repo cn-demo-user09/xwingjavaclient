@@ -22,7 +22,7 @@ public class App {
     public static final Properties myProps = new Properties();
  
     static {
-        host = Optional.ofNullable(System.getenv("HOSTNAME"));
+        host = Optional.ofNullable(System.getenv("http://129.144.148.225:3000/reactorCore/"));
         port = Optional.ofNullable(System.getenv("PORT"));
     }
  
@@ -41,7 +41,7 @@ public class App {
         System.out.println("Server started");
  
         runGetRequest();
-        //runDatabaseQuery();
+        runDatabaseQuery();
     }
  
     /**
@@ -50,7 +50,7 @@ public class App {
     private static void runGetRequest() {
  
     	// sample URL
-        String url = "http://129.144.148.225:3000/shield/33/45/blue/javafighteruser01";
+        String url = "http://129.144.148.225:3000/shield/y0/45/blue/javafighteruser01";
         CloseableHttpResponse response = null;
  
         try {
@@ -76,10 +76,10 @@ public class App {
      * Performs a call to the database.
      */
     private static void runDatabaseQuery() {
-        String host = "myHost";
-        String database = "myDatabase";
-        String user = "myUsername";
-        String password = "myPassword";
+        String host = "129.144.148.225";
+        String database = "deathstar";
+        String user = "Captain";
+        String password = "welcome1";
         DBConnection db = new DBConnection("jdbc:mysql://" 
                 + host + "/" 
                 + database + "?user=" 
